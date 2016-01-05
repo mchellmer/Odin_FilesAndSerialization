@@ -6,8 +6,6 @@
 class Hangman
   require "csv"
   
-  private
-  
   def check_yes_no(answer)
     until ['y','n'].include?(answer.downcase) do
       puts "Sorry, I didn't catch that.\n[y]es, or [n]o?"
@@ -119,8 +117,7 @@ class Hangman
     puts "Your game has been save under the file: #{answer}"
   end
   
-  public
-  
+
   def initialize
   # A new game is started, script loads dictionary and selects random word (5-12 char)
   # Option to load saved game
@@ -155,4 +152,6 @@ class Hangman
       end
     end
   end
+  
+  private :check_yes_no, :load_old_name, :newgame, :oldgame, :end_game, :make_guess, :save_game
 end
