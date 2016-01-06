@@ -40,7 +40,6 @@ class Hangman
       end
     end
     @word = words[rand(words.length)].upcase
-    puts "#{@word}"
     @guesses = 6
     @key = ''
     @word.length.times do @key << '_' end
@@ -155,3 +154,5 @@ class Hangman
   
   private :check_yes_no, :load_old_name, :newgame, :oldgame, :end_game, :make_guess, :save_game
 end
+
+Hangman.new
